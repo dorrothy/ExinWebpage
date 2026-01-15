@@ -39,23 +39,23 @@ img{max-width:100%; display:block}
   justify-content:space-between;
   padding:14px 16px;
 }
-
-
-
 .logo{
   display:flex;
   align-items:center;
-  height:100px;   
-  padding-top:5px;           
+  height:44px;          /* kontroluje wysokość headera */
 }
 
 .logo img{
-  height:100%;              
-  max-width:200px;       
+  height:100%;
   width:auto;
+  max-width:200px;      /* zabezpieczenie przed „rozlaniem” */
   object-fit:contain;
   display:block;
+
+  /* delikatny premium cień */
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
 }
+
 .nav{
   display:flex;
   gap:18px;
@@ -357,4 +357,12 @@ input:focus, textarea:focus{border-color: rgba(124,92,255,.6)}
 }
 @media (max-width: 900px){
   .hero-tiles{grid-template-columns:1fr}
+  
+  .logo{
+    height:36px;
+  }
+
+  .logo img{
+    max-width:160px;
+  }
 }
