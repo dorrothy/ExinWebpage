@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nazwa Firmy — Wykończenia wnętrz</title>
+  <meta name="description" content="Wykończenia wnętrz pod klucz. Realizacje, oferta i kontakt." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="#top" aria-label="Strona główna">NazwaFirmy</a>
+
+    <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" aria-label="Główna nawigacja">
+      <a href="#oferta">Oferta</a>
+      <a href="#realizacje">Realizacje</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Wykończenia wnętrz</p>
+          <h1>Wnętrza pod klucz — solidnie, estetycznie, terminowo</h1>
+          <p class="lead">
+            Krótkie zdanie o firmie: realizujemy mieszkania i domy od projektu po wykończenie.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn" href="#realizacje">Zobacz realizacje</a>
+            <a class="btn btn-ghost" href="#kontakt">Kontakt</a>
+          </div>
+
+<div class="hero-tiles">
+  <a class="hero-tile" href="#oferta">
+    <span class="kicker">Wykończenia pod klucz</span>
+    <strong>Od ____ zł/m²</strong>
+    <span class="small">Projekt • Materiały • Realizacja</span>
+  </a>
+
+  <a class="hero-tile" href="#realizacje">
+    <span class="kicker">Realizacje</span>
+    <strong>Zobacz portfolio</strong>
+    <span class="small">Mieszkania • Domy • Łazienki</span>
+  </a>
+
+  <a class="hero-tile" href="#kontakt">
+    <span class="kicker">Kontakt</span>
+    <strong>Umów wycenę</strong>
+    <span class="small">Telefon / Email / Formularz</span>
+  </a>
+</div>
+
+          <ul class="badges" aria-label="Atuty">
+            <li>Wycena</li>
+            <li>Harmonogram</li>
+            <li>Gwarancja</li>
+          </ul>
+        </div>
+
+        <div class="hero-card" role="img" aria-label="Zdjęcie przykładowego wnętrza">
+          <!-- Na start możesz tu wstawić obraz:
+               <img src="assets/hero.jpg" alt="Nowoczesne wnętrze" />
+          -->
+          <div class="hero-placeholder">
+            Dodaj zdjęcie hero (assets/hero.jpg)
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="oferta" class="section">
+      <div class="container">
+        <h2>Oferta</h2>
+        <p class="section-lead">
+          Najważniejsze usługi w punktach, prosto i konkretnie.
+        </p>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Wykończenia pod klucz</h3>
+            <p>Kompleksowe prace: instalacje, gładzie, malowanie, podłogi, łazienki.</p>
+          </article>
+
+          <article class="card">
+            <h3>Remonty mieszkań</h3>
+            <p>Odświeżenie lub generalny remont — z jasnym zakresem i terminem.</p>
+          </article>
+
+          <article class="card">
+            <h3>Zabudowy i detale</h3>
+            <p>Listwy, ścianki TV, zabudowy GK, poprawki i prace wykończeniowe.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="realizacje" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>Realizacje</h2>
+            <p class="section-lead">Kliknij miniaturę, aby zobaczyć większe zdjęcie.</p>
+          </div>
+        </div>
+
+        <div class="gallery" id="gallery">
+          <!-- Podmień src na własne zdjęcia w assets/ -->
+          <button class="tile" data-full="assets/r1.jpg" aria-label="Realizacja 1">
+            <img src="assets/r1.jpg" alt="Realizacja 1" loading="lazy">
+          </button>
+          <button class="tile" data-full="assets/r2.jpg" aria-label="Realizacja 2">
+            <img src="assets/r2.jpg" alt="Realizacja 2" loading="lazy">
+          </button>
+          <button class="tile" data-full="assets/r3.jpg" aria-label="Realizacja 3">
+            <img src="assets/r3.jpg" alt="Realizacja 3" loading="lazy">
+          </button>
+          <button class="tile" data-full="assets/r4.jpg" aria-label="Realizacja 4">
+            <img src="assets/r4.jpg" alt="Realizacja 4" loading="lazy">
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="kontakt" class="section">
+      <div class="container contact-grid">
+        <div>
+          <h2>Kontakt</h2>
+          <p class="section-lead">
+            Napisz lub zadzwoń — wrócimy z odpowiedzią najszybciej jak się da.
+          </p>
+
+          <div class="contact-box">
+            <p><strong>Telefon:</strong> <a href="tel:+48123123123">+48 123 123 123</a></p>
+            <p><strong>Email:</strong> <a href="mailto:kontakt@twojafirma.pl">kontakt@twojafirma.pl</a></p>
+            <p><strong>Obszar:</strong> np. Warszawa i okolice</p>
+          </div>
+
+          <p class="note">
+            Formularz poniżej w wersji GitHub Pages wymaga zewnętrznej usługi do wysyłki (podpowiadam opcje niżej).
+          </p>
+        </div>
+
+        <form class="form" id="contactForm">
+          <label>
+            Imię i nazwisko
+            <input name="name" required autocomplete="name" />
+          </label>
+
+          <label>
+            Email
+            <input name="email" type="email" required autocomplete="email" />
+          </label>
+
+          <label>
+            Wiadomość
+            <textarea name="message" rows="5" required></textarea>
+          </label>
+
+          <button class="btn" type="submit">Wyślij</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Modal galerii -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="true"></div>
+    <div class="modal-content" role="dialog" aria-modal="true" aria-label="Podgląd zdjęcia">
+      <button class="modal-close" data-close="true" aria-label="Zamknij">×</button>
+      <img id="modalImg" alt="Podgląd realizacji">
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> NazwaFirmy. Wszelkie prawa zastrzeżone.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
