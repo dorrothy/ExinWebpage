@@ -381,6 +381,9 @@ input:focus, textarea:focus{border-color: rgba(124,92,255,.6)}
     min-width: 180px;
   }
   .nav[data-open="true"]{display:flex}
+  .section{
+    padding:36px 0;
+  }
 }
 
 
