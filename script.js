@@ -49,3 +49,71 @@ form.addEventListener("submit", (e) => {
   statusEl.textContent = "Dziękujemy za wiadomość! (na razie formularz nie wysyła wiadomości — dodamy integrację).";
   form.reset();
 });
+
+
+const details = {
+  inwestycje: {
+    title: "Doradztwo inwestycyjne",
+    text: `
+      <p>Pomagamy w bezpiecznym i przemyślanym inwestowaniu w nieruchomości.</p>
+      <ul>
+        <li>Analiza opłacalności inwestycji</li>
+        <li>Wsparcie przy zakupie i sprzedaży</li>
+        <li>Strategia pod wynajem lub flipping</li>
+      </ul>
+    `
+  },
+  wnetrza: {
+    title: "Kompleksowe wykończenia wnętrz",
+    text: `
+      <p>Od projektu po klucz — bez stresu.</p>
+      <p>Jak wygląda proces?</p>
+      <ol>
+        <li>Bezpłatne spotkanie, planowanie budżetu.</li>
+        <li>Podpisanie umowy projektowej.</li>
+        <li>Prace projektowe.</li>
+        <li>Przedstawienie kosztorysu.</li>
+        <li>Podpisanie umowy wykończeniowej.</li>
+        <li>Prace wykończeniowe, nadzór koordynatora.</li>
+      </ul>
+    `
+  },
+  najem: {
+    title: "Zarządzanie najmem długoterminowym",
+    text: `
+      <p>Ty inwestujesz, my zajmujemy się resztą.</p>
+      <ul>
+        <li>Dobór sprawdzonych najemców</li>
+        <li>Obsługa umów i płatności</li>
+        <li>Stały kontakt i opieka nad lokalem</li>
+      </ul>
+    `
+  },
+  logistyka: {
+    title: "Zabezpieczenia logistyczne",
+    text: `
+      <p>Gwarantujemy sprawną realizację i bezpieczeństwo.</p>
+      <ul>
+        <li>Terminowe dostawy</li>
+        <li>Sprawdzeni dostawcy</li>
+        <li>Pełna kontrola procesu</li>
+      </ul>
+    `
+  }
+};
+
+const cards = document.querySelectorAll(".card2");
+const box = document.getElementById("offerDetails");
+
+cards.forEach(card => {
+  card.addEventListener("click", () => {
+    cards.forEach(c => c.classList.remove("active"));
+    card.classList.add("active");
+
+    const id = card.dataset.id;
+    box.innerHTML = `
+      <h3>${details[id].title}</h3>
+      ${details[id].text}
+    `;
+  });
+});
