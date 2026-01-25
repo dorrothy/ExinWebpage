@@ -117,3 +117,11 @@ cards.forEach(card => {
     `;
   });
 });
+
+//close nav-toggle after clicking on item
+document.querySelectorAll(".nav a").forEach(link => {
+  link.addEventListener("click", () => {
+    nav.setAttribute("data-open", "false");
+    toggle.setAttribute("aria-expanded", "false");
+  });
+});
