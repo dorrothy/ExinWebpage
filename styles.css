@@ -42,17 +42,16 @@ img{max-width:100%; display:block}
 .logo{
   display:flex;
   align-items:center;
-  height:44px;          /* kontroluje wysokość headera */
+  height:44px;
 }
 
 .logo img{
   height:100%;
   width:auto;
-  max-width:200px;      /* zabezpieczenie przed „rozlaniem” */
+  max-width:200px;
   object-fit:contain;
   display:block;
 
-  /* delikatny premium cień */
   filter: drop-shadow(0 4px 12px rgba(0,0,0,.35));
 }
 
@@ -169,7 +168,7 @@ h1{
 }
 
 .section{
-  padding:56px 0;
+  padding:72px 0;
 }
 .section-alt{
   background: rgba(255,255,255,.02);

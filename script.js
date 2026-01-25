@@ -45,6 +45,7 @@ const statusEl = document.getElementById("formStatus");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
-  statusEl.textContent = "Dziękujemy! (na razie formularz nie wysyła wiadomości — dodamy integrację).";
+  debugger;
+  statusEl.textContent = "Dziękujemy za wiadomość! (na razie formularz nie wysyła wiadomości — dodamy integrację).";
   form.reset();
 });

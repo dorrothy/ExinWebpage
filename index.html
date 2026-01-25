@@ -10,8 +10,8 @@
 <body>
   <header class="header">
     <a class="logo" href="#top" aria-label="Strona główna">
-    <img src="assets/logo.png" alt="Exin – Exclusive Interiors">
-  </a>
+      <img src="assets/logoNew.png" alt="Exin – Exclusive Interiors">
+    </a>
 
     <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -21,6 +21,7 @@
       <a href="#o-firmie">O firmie</a>
       <a href="#oferta">Oferta</a>
       <a href="#realizacje">Realizacje</a>
+      <a href="#b2b">B2B</a>
       <a href="#kontakt">Kontakt</a>
     </nav>
   </header>
@@ -32,39 +33,45 @@
           <p class="eyebrow">Wykończenia wnętrz</p>
           <h1>Wnętrza pod klucz — solidnie, estetycznie, terminowo</h1>
           <p class="lead">
-            Krótkie zdanie o firmie: realizujemy mieszkania i domy od projektu po wykończenie.
+            Realizujemy mieszkania i domy od projektu po wykończenie.
           </p>
-
+<!-- 
           <div class="cta-row">
             <a class="btn" href="#realizacje">Zobacz realizacje</a>
             <a class="btn btn-ghost" href="#kontakt">Kontakt</a>
+          </div> -->
+
+          <div class="hero-tiles">
+            <a class="hero-tile" href="#oferta">
+              <span class="kicker">Wykończenia pod klucz</span>
+              <strong>Od ____ zł/m²</strong>
+              <span class="small">Projekt • Materiały • Realizacja</span>
+            </a>
+
+            <a class="hero-tile" href="#realizacje">
+              <span class="kicker">Realizacje</span>
+              <strong>Zobacz portfolio</strong>
+              <span class="small">Mieszkania • Domy • Łazienki</span>
+            </a>
+            
+            <a class="hero-tile" href="#b2b">
+              <span class="kicker">B2B</span>
+              <strong>Zobacz ofertę dla firm</strong>
+              <span class="small">Współpraca  • Wsparcie</span>
+            </a>
+
+            <a class="hero-tile" href="#kontakt">
+              <span class="kicker">Kontakt</span>
+              <strong>Umów wycenę</strong>
+              <span class="small">Telefon • Email • Formularz</span>
+            </a>
           </div>
 
-<div class="hero-tiles">
-  <a class="hero-tile" href="#oferta">
-    <span class="kicker">Wykończenia pod klucz</span>
-    <strong>Od ____ zł/m²</strong>
-    <span class="small">Projekt • Materiały • Realizacja</span>
-  </a>
-
-  <a class="hero-tile" href="#realizacje">
-    <span class="kicker">Realizacje</span>
-    <strong>Zobacz portfolio</strong>
-    <span class="small">Mieszkania • Domy • Łazienki</span>
-  </a>
-
-  <a class="hero-tile" href="#kontakt">
-    <span class="kicker">Kontakt</span>
-    <strong>Umów wycenę</strong>
-    <span class="small">Telefon / Email / Formularz</span>
-  </a>
-</div>
-
-          <ul class="badges" aria-label="Atuty">
+          <!-- <ul class="badges" aria-label="Atuty">
             <li>Wycena</li>
             <li>Harmonogram</li>
             <li>Gwarancja</li>
-          </ul>
+          </ul> -->
         </div>
 
         <div class="hero-card" role="img" aria-label="Zdjęcie przykładowego wnętrza">
@@ -74,31 +81,30 @@
     </section>
 
     <section id="o-firmie" class="section section-alt">
-  <div class="container">
-    <h2>O firmie</h2>
-    <p class="section-lead">
-      Exin — wykończenia wnętrz pod klucz oraz wsparcie inwestycyjne. Krótko o tym, jak pracujecie i dla kogo.
-    </p>
+      <div class="container">
+        <h2>O firmie</h2>
+        <p class="section-lead">
+          Exin — wykończenia wnętrz pod klucz oraz wsparcie inwestycyjne. Krótko o tym, jak pracujecie i dla kogo.
+        </p>
 
-    <div class="cards">
-      <article class="card">
-        <h3>Doświadczenie i proces</h3>
-        <p>Opis w 1–2 zdaniach: od koncepcji i wyceny po realizację i odbiór.</p>
-      </article>
+        <div class="cards">
+          <article class="card">
+            <h3>Doświadczenie i proces</h3>
+            <p>Opis w 1–2 zdaniach: od koncepcji i wyceny po realizację i odbiór.</p>
+          </article>
 
-      <article class="card">
-        <h3>Jakość i terminowość</h3>
-        <p>Co wyróżnia Exin: standard, komunikacja, harmonogram, gwarancja.</p>
-      </article>
+          <article class="card">
+            <h3>Jakość i terminowość</h3>
+            <p>Co wyróżnia Exin: standard, komunikacja, harmonogram, gwarancja.</p>
+          </article>
 
-      <article class="card">
-        <h3>Obsługa inwestorów</h3>
-        <p>Doradztwo, przygotowanie pod najem, koordynacja dostaw i ekip.</p>
-      </article>
-    </div>
-  </div>
-</section>
-
+          <article class="card">
+            <h3>Obsługa inwestorów</h3>
+            <p>Doradztwo, przygotowanie pod najem, koordynacja dostaw i ekip.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
     <section id="oferta" class="section">
       <div class="container">
@@ -109,18 +115,26 @@
 
         <div class="cards">
           <article class="card">
-            <h3>Wykończenia pod klucz</h3>
-            <p>Kompleksowe prace: instalacje, gładzie, malowanie, podłogi, łazienki.</p>
+            <h3>Doradztwo inwestycyjne</h3>
+            <p>• Udzielanie spersonalizowanych rekomendacji dotyczących kupna, sprzedaży.</p>
           </article>
 
           <article class="card">
-            <h3>Remonty mieszkań</h3>
-            <p>Odświeżenie lub generalny remont — z jasnym zakresem i terminem.</p>
+            <h3>Kompleksowe wykończenia wnętrz</h3>
+            <p>• Aranżacja i prace wykończeniowe w nowych mieszkaniach.</p>
+            <p>• Odświeżenie lub generalny remont — z jasnym zakresem i terminem.</p>
           </article>
 
           <article class="card">
-            <h3>Zabudowy i detale</h3>
-            <p>Listwy, ścianki TV, zabudowy GK, poprawki i prace wykończeniowe.</p>
+            <h3>Zarządzanie najmem długoterminowym.</h3>
+            <p>• Poszukiwanie i weryfikację najemców,.</p>
+            <p>• Przygotowanie umów.</p>
+            <p>• Kontrola płatności.</p>
+          </article>
+          
+          <article class="card">
+            <h3>Zabezpieczenia logistyczne</h3>
+            <p>• Termonowe dostawy i gwarancja bezpieczeństwa.</p>
           </article>
         </div>
       </div>
@@ -136,20 +150,32 @@
         </div>
 
         <div class="gallery" id="gallery">
-          <!-- Podmień src na własne zdjęcia w assets/ -->
-          <button class="tile" data-full="assets/r1.jpg" aria-label="Realizacja 1">
-            <img src="assets/r1.jpg" alt="Realizacja 1" loading="lazy">
+          <button class="tile" data-full="assets/hero.jpg" aria-label="Realizacja 1">
+            <img src="assets/hero.jpg" alt="Realizacja 1" loading="lazy">
           </button>
-          <button class="tile" data-full="assets/r2.jpg" aria-label="Realizacja 2">
-            <img src="assets/r2.jpg" alt="Realizacja 2" loading="lazy">
+          <button class="tile" data-full="assets/hero.jpg" aria-label="Realizacja 2">
+            <img src="assets/hero.jpg" alt="Realizacja 2" loading="lazy">
           </button>
-          <button class="tile" data-full="assets/r3.jpg" aria-label="Realizacja 3">
-            <img src="assets/r3.jpg" alt="Realizacja 3" loading="lazy">
+          <button class="tile" data-full="assets/hero.jpg" aria-label="Realizacja 3">
+            <img src="assets/hero.jpg" alt="Realizacja 3" loading="lazy">
           </button>
-          <button class="tile" data-full="assets/r4.jpg" aria-label="Realizacja 4">
-            <img src="assets/r4.jpg" alt="Realizacja 4" loading="lazy">
+          <button class="tile" data-full="assets/hero.jpg" aria-label="Realizacja 4">
+            <img src="assets/hero.jpg" alt="Realizacja 4" loading="lazy">
           </button>
         </div>
+      </div>
+    </section>
+    
+    <section id="b2b" class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <h2>B2B</h2>
+            <p class="section-lead">Zacznij współpracę.</p>
+          </div>
+        </div>
+
+       <!-- Dodac content do tej sekcji albo odnosnik do innej storny -->
       </div>
     </section>
 
