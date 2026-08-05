@@ -116,6 +116,15 @@ form.addEventListener("submit", async (e) => {
   }
 });
 
+const images = document.querySelectorAll(".hero-card img");
+let current = 0;
+
+setInterval(() => {
+    images[current].classList.remove("active");
+    current = (current + 1) % images.length;
+    images[current].classList.add("active");
+}, 4000); // Change every 4 seconds
+
 
 const details = {
   inwestycje: {
