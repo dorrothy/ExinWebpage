@@ -15,10 +15,13 @@ html{scroll-behavior:smooth}
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.25), transparent 60%),
-              radial-gradient(900px 500px at 80% 0%, rgba(0,200,255,.15), transparent 55%),
-              var(--bg);
-  overflow-x: hidden; 
+  background:
+    linear-gradient(rgba(12,15,20,.86), rgba(12,15,20,.9)),
+    radial-gradient(1200px 600px at 20% -10%, rgba(124,92,255,.22), transparent 60%),
+    radial-gradient(900px 500px at 80% 0%, rgba(0,200,255,.12), transparent 55%),
+    url("assets/tlo.jpg") center top / cover no-repeat fixed,
+    var(--bg);
+  overflow-x: hidden;
   color:var(--text);
 }
 
@@ -327,16 +330,21 @@ input:focus, textarea:focus{border-color: rgba(124,92,255,.6)}
   position:fixed;
   inset:0;
   display:none;
+  z-index:100;
 }
-.modal[aria-hidden="false"]{display:block}
+.modal[aria-hidden="false"]{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 .modal-backdrop{
   position:absolute; inset:0;
-  background: rgba(0,0,0,.65);
+  background: rgba(0,0,0,.8);
 }
 .modal-content{
   position:relative;
-  width:min(92vw, 980px);
-  margin: 6vh auto;
+  width:min(92vw, 1100px);
+  max-height: 90vh;
   border:1px solid var(--border);
   border-radius: var(--radius);
   overflow:hidden;
@@ -345,20 +353,75 @@ input:focus, textarea:focus{border-color: rgba(124,92,255,.6)}
 .modal-content img{
   width:100%;
   height: auto;
-  max-height: 80vh;
+  max-height: 90vh;
   object-fit: contain;
 }
+.modal-caption{
+  position:absolute;
+  top:0; left:0; right:0;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 64px 26px 18px;
+  background: linear-gradient(to bottom, rgba(0,0,0,.72), rgba(0,0,0,0));
+  color:#fff;
+  z-index:1;
+  pointer-events:none;
+}
+.modal-caption-title{
+  font-weight:700;
+  font-size:16px;
+  line-height:1.25;
+}
+.modal-caption-count{
+  color: rgba(255,255,255,.75);
+  font-size:14px;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
 .modal-close{
   position:absolute;
   top:10px; right:10px;
   width:40px; height:40px;
   border-radius: 12px;
   border:1px solid var(--border);
-  background: rgba(255,255,255,.05);
+  background: rgba(0,0,0,.5);
   color:var(--text);
   cursor:pointer;
   font-size:22px;
   line-height: 1;
+  z-index:2;
+}
+.modal-close:hover{ background: rgba(255,255,255,.12); }
+
+.modal-nav{
+  position:absolute;
+  top:50%;
+  transform: translateY(-50%);
+  width:52px; height:52px;
+  border-radius:50%;
+  border:1px solid var(--border);
+  background: rgba(0,0,0,.5);
+  color:var(--text);
+  cursor:pointer;
+  font-size:30px;
+  line-height:1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:2;
+  transition: background .2s ease;
+}
+.modal-nav:hover{ background: rgba(255,255,255,.15); }
+.modal-prev{ left: 18px; }
+.modal-next{ right: 18px; }
+
+@media (max-width: 640px){
+  .modal-nav{ width:44px; height:44px; font-size:26px; }
+  .modal-prev{ left: 8px; }
+  .modal-next{ right: 8px; }
 }
 
 /* Responsive */
@@ -459,7 +522,7 @@ input:focus, textarea:focus{border-color: rgba(124,92,255,.6)}
 }
 @media (max-width: 900px){
   .hero-tiles{grid-template-columns:1fr}
-  
+
   .logo{
     height:36px;
   }
@@ -467,4 +530,77 @@ input:focus, textarea:focus{border-color: rgba(124,92,255,.6)}
   .logo img{
     max-width:160px;
   }
+}
+
+/* Prose (O firmie / B2B intro) */
+.prose{
+  max-width: 78ch;
+  margin-bottom: 22px;
+}
+.prose p{
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0 0 14px;
+}
+.prose strong{ color: var(--text); }
+
+.section-note{
+  margin-top: 22px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+.section-note a{
+  color: var(--text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+/* Offer details — nested lists spacing */
+.offer-details p{ color: var(--muted); line-height:1.6; margin: 0 0 8px; }
+.offer-details p strong{ color: var(--text); }
+.offer-details ul, .offer-details ol{ margin: 0 0 14px; padding-left: 20px; color: var(--muted); }
+.offer-details li{ margin: 4px 0; line-height: 1.5; }
+.offer-details .btn{ margin-top: 6px; }
+
+/* Realizacje — projects */
+.realizacje{ display: grid; gap: 34px; }
+.realizacja-head{ margin-bottom: 12px; }
+.realizacja-head h3{ margin: 0; font-size: 20px; }
+.realizacja-sub{ margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+
+/* B2B */
+.b2b-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 8px;
+}
+.b2b-card{
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
+  padding: 20px;
+}
+.b2b-card h3{ margin: 0 0 10px; font-size: 18px; }
+.b2b-card p{ margin: 0 0 12px; color: var(--muted); line-height: 1.6; }
+.b2b-card ul{ margin: 0; padding-left: 18px; color: var(--muted); }
+.b2b-card li{ margin: 5px 0; line-height: 1.45; }
+
+/* Contact map */
+.map{
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: rgba(255,255,255,.03);
+}
+.map iframe{
+  display: block;
+  width: 100%;
+  height: 260px;
+  border: 0;
+}
+
+@media (max-width: 900px){
+  .b2b-grid{ grid-template-columns: 1fr; }
 }
